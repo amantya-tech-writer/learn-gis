@@ -11,32 +11,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Amantyatech',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        We are building the future of infrastructure, agrarian, and urban
+        planning with VertiGIS. We have some cool projects.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Our Mission',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        We focus on innovative solutions and modern processes, ensuring
+        efficiency and real-world impact.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Get Involved',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Join us in shaping tomorrow's technology and infrastructure. Together, we
+        make a difference.
       </>
     ),
   },
