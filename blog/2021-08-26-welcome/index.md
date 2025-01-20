@@ -11,6 +11,8 @@ Here are a few tips you might find useful.
 
 <!-- truncate -->
 
+Just gonna edit and then push to remote. Then see how the contrubution works out.
+
 Simply add Markdown files (or folders) to the `blog` directory.
 
 Regular blog authors can be added to `authors.yml`.
