@@ -1,17 +1,75 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-We have vector and feature data. And this data is categorical and multivariate data. So definitions for both of these would be required with examples. Another thing about vector data is that it can have an attribute table alongside it, and this attribute table provides more information about the locations. So. The attribute table may have. Information. Such as area, the length of the shape. The state that this area is in. Or the country it is in. 
+# GIS Data Types and Structures
 
-Vector and feature collection data is has three main types, 1 is point, the next is lines and the 3rd is polygons points. Are dimensionless. They represent a single location. Lines have a single dimension. And also can have an attribute record. Polygons are two dimensional and they can also have an attribute record. This is where I'll also need a sort of diagram to show point. Lines and polygons. Maybe throw something? 
+## 1. Vector and Feature Data
+- Categorical and multivariate data types
+- Contains attribute tables with additional information:
+    - Area measurements
+    - Length of shapes
+    - Geographic information (state, country)
 
-Next we come to raster data, and this is just imagery for continuous surfaces raster data. Is similar to a restaurant victor. We can think of them as similar to what we have in Photoshop and Illustrator. So Photoshop works with raster data which is just image and pixels whereas Illustrator works with vector data which is mathematical representation of the data. Vector is more precise and. Can hold a lot of information, but raster data also holds information now generally. Images we have simple RGB data, but in this case we have other data as well, such as about the elevation the. Surface of a particular land. Raster data is made up of fixed sized pixels, and each of these pixels is going to contain some information about that. Particular area. In raster data, attributes are per value and not pixel. This is very important. I don't know what this means so I'll have to look more into it.
+### Vector Data Types
+1. Points
+     - Dimensionless
+     - Represents single locations
+2. Lines
+     - One-dimensional
+     - Contains attribute records
+3. Polygons
+     - Two-dimensional
+     - Contains attribute records
 
-Containers for special data. They come in several formats. So we have file geodatabases, we have Sqlite or. Spatialite databases then we also have Jio, Jason and post GIS. All of which can save geolocation data. I want an image of a geodatabase here. 
+<div style={{
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "10px"
+}}>
+<div>
 
-She files are specific ESRI format. They are used by most GIS systems. A shade file will generally have 37 files within it and rely on an old database. For data tables so it is called D base 4. There are slow, large, limiting but still useful and that is why many people are moving to Geojon and other such files. 
+## 2. Raster Data
+- Used for continuous surfaces
+- Similar to image-based data
+- Characteristics:
+    - Made up of fixed-size pixels
+    - Each pixel contains area information
+    - Contains various data types:
+        - RGB imagery
+        - Elevation data
+        - Surface information
+    - Attributes are per value, not per pixel
+</div>
+<div>
+![](assets/2025-01-20-07-15-42.png)
 
-Map documents are the workplace to view and analyze data, so they store representation of the data and don't actually alter the data itself. This allows for geoprocessing so you can manipulate, filter, clean up the data and analyze it. And this data is referred to on disk and it is not actually embedded directly. 
+</div>
+</div>
 
-Map documents have layers and. These are representation of geographic data and. The document layers can. Stack over each other, overlay and and they simply work like Photoshop layers itself. 
+## 3. Spatial Data Containers
+- File geodatabases
+- SQLite/SpatiaLite databases
+- GeoJSON
+- PostGIS
+
+### Shapefiles (ESRI Format)
+- Industry standard format
+- Contains multiple files (up to 37)
+- Uses dBase4 for data tables
+- Limitations:
+    - Slower processing
+    - Larger size
+    - Being replaced by newer formats like GeoJSON
+
+## 4. Map Documents
+- Workspace for viewing and analyzing data
+- Characteristics:
+    - Stores data representation
+    - Non-destructive editing
+    - Enables geoprocessing
+    - References data on disk
+- Uses layers that:
+    - Stack and overlay
+    - Similar to image editing software layers
+    - Represent geographic data
