@@ -1,45 +1,85 @@
-I'll organize the key information from this MDX content:
+---
+sidebar-position: 2
+---
 
-**Key Terms & Definitions:**
-1. Watershed - A land-based area that drains to a single point
-2. Definition Query - A way to limit what features are displayed based on attribute values
-3. Scale-dependent rendering - Controls when layers are visible based on zoom level
-4. Layer Properties - Dialog box containing settings and information about a GIS layer
-5. Unique Values renderer - Draws categories using unique values from data fields
-6. Symbology - Visual representation of features on a map
+**Key Points:**
+1. Attribute tables link data values to spatial features in GIS
+2. Schema defines the structure and data types for attributes (it's just the table itself)
+3. Records (rows) contain data about individual features 
+4. Fields (columns) contain specific types of information 
+5. Data types include text, integers, and decimal numbers
+6. Null values are different from empty text values
 
-**Important Examples:**
-1. Data Types shown:
-  - NHDFlowline (Rivers)
-  - NHDWaterbody (Lakes)
-  - WBD_Subwatershed (Watersheds)
+```GeoJSON
+  {
+    "filed1": "row1",
+    "field2": "row2"
+  }
+```
 
-2. Attribute Example:
-  - TotDA (Total Drainage Area in square kilometers)
-  - HUC_8 (Watershed identifier)
+**Examples:**
+1. Rivers data with attributes like:
+  - Length in kilometers
+  - GNIS name
+  - Resolution
+  - COMID
+  - Classification (added field)
+
+2. Strahler Stream Order Classification:
+  - Order 1: Headwater streams (no incoming streams)
+  - Order 2: Where two order 1 streams merge
 
 **Key Steps Demonstrated:**
-1. Renaming Layers:
-  - Double click slowly on layer name
-  - Use F2 key
-  - Right-click and select Properties
+1. Adding a New Field:
+  - Click "Add" in attribute table
+  - Name the field
+  - Select data type
+  - Set field length
+  - Save changes
 
-2. Changing Layer Symbology:
-  - Click on color patch
-  - Use symbology pane
-  - Select predefined styles or customize colors
+![](assets/2025-01-20-12-51-50.png)
 
-3. Setting Scale-Dependent Rendering:
-  - Right-click layer → Properties
-  - Set "do not show layer when zoomed" values
-  - Specify scale values (e.g., 1:500,000)
+2. Field Calculation:
+  - Right-click field
+  - Choose "Calculate Field"
+  - Use Python 3 expression❗
+  - Set value (e.g., classification = 1)
 
-4. Creating Definition Queries:
-  - Access layer properties
-  - Click "New Definition Query"
-  - Add clause (e.g., TotDA > 5)
+![calculated field](./assets/calculated-field.gif)
 
-5. Adding Labels:
-  - Right-click layer → Select label
-  - Double-click field name for label text
-  - Customize label appearance (font, size, color)
+3. Interactive Selection:
+  - Use selection tool
+  - Click and drag to select features
+  - Clear selections as needed
+![](assets/2025-01-20-13-13-44.png)
+
+4. Symbology Based on Attributes:
+  - Choose unique values renderer
+  - Select classification field
+  - Assign colors and line thickness
+  - Apply to different values
+![](assets/2025-01-20-13-14-42.png)
+
+**Common Tasks:**
+1. Picking out specific data from big datasets
+2. Adding new information to existing features
+3. Grouping features based on their attributes
+4. Showing data based on attribute values
+5. Working with chosen features
+
+**Example:**
+Let's say you have a map of a city with different types of buildings. You can:
+1. Select only the schools from the map.
+2. Add information like the number of students to each school.
+3. Group buildings into categories like residential, commercial, and educational.
+4. Show only the schools on the map.
+5. Work with the selected schools to analyze their locations.
+
+Types of selections:
+1. Interactive selection
+2. select by attributes 
+  ![](assets/2025-01-20-13-33-46.png)
+  - input features: object that I wanna select
+  - selecting features: objects that drive the selection
+3. select by location
+  - ![](assets/2025-01-20-13-36-19.png)
