@@ -1,4 +1,4 @@
-# Learn GIS
+# Learn GIS in 21 Days
 
 This repository contains educational materials and examples for learning Geographic Information Systems (GIS) concepts.
 
