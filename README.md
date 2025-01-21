@@ -1,41 +1,49 @@
-# Website
+# Learn GIS in 21 Days
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This repository contains educational materials and examples for learning Geographic Information Systems (GIS) concepts.
 
-### Installation
+## Overview
 
-```
-$ yarn
-```
+The project is built using [Docusaurus](https://docusaurus.io/), a modern static website generator, and includes interactive examples of GIS concepts using GeoJSON.
 
-### Local Development
+## Features
 
-```
-$ yarn start
-```
+- Comprehensive introduction to GIS layers and concepts
+- Interactive GeoJSON examples with syntax highlighting
+- Mermaid diagrams for visual representation
+- MDX documentation with React components
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Main Topics Covered
 
-### Build
+1. Layers in GIS
+2. Feature Layers
+3. Geometric Feature Layers
+4. Dimensions in GIS
+5. GeoJSON Examples
+    - Point Features
+    - Polygon Features
 
-```
-$ yarn build
-```
+## Getting Started
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+```bash
+# Install dependencies
+npm install
 
-### Deployment
+# Start development server
+npm start
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
+# Build for production
+npm run build
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Technical Stack
+
+- React 19
+- Docusaurus 3.7.0
+- PrismJS for syntax highlighting
+- Mermaid for diagrams
+
+## Development Requirements
+
+- Node.js >= 18.0
+- Modern web browsers (see browserslist in package.json)
