@@ -10,7 +10,6 @@ sidebar_position: 3
 - equator: 0° latitude
 - datum: reference point for measuring locations on Earth
 - projection: algorithm to convert 3D Earth to 2D map
-- 
 
 All projections have a coordinate system
 
@@ -33,6 +32,7 @@ GCS is sphrere, PCS is flat map.
 take earth and squish it inot a flat map -> distortion
 
 Properties that get distorted from 3D to 2D:
+
 - shape
 - area
 - distance
@@ -64,6 +64,9 @@ Find all countries that overlap with a bounding box on a map of North and South 
 3. Run Union tool to combine features
 4. Join attributes to get country data
 
+note: need to set environment settings to control tool behavior: mainly the processing extend needs to be set to the extent of layer > the bounding box.
+![](assets/2025-01-22-03-04-25.png)
+
 Key points:
 - Analysis tab contains geoprocessing tools
 - Union tool combines features (like set theory)
@@ -74,7 +77,11 @@ Key points:
 ![toolbox](assets/2025-01-21-05-13-34.png)
 
 ## Goal
-Find which countries contain specific watersheds using spatial join analysis.
+
+We've various waterbodies and we want to find out which counties they are in.
+
+Tool: spatial join.
+- connects geographic features based on location
 
 ## Steps
 1. Select watershed features as target
@@ -84,17 +91,15 @@ Find which countries contain specific watersheds using spatial join analysis.
 5. Review results in attribute table
 
 Key points:
-- Spatial Join tool connects geographic features based on location
-- One watershed can overlap multiple countries
-- Field mapping allows customizing output attributes
-- Attribute table shows final joined data
-- Can rename fields for clarity (e.g., "Name" to "County")
+- tool: Spatial Join tool connects geographic features based on location.
+- relationship: **1 to many** One waterbody can overlap multiple counties.
+- Field mapping allows customizing output attributes.
+- Attribute table shows final joined data.
+- Can rename fields for clarity (e.g., "Name" to "County").
 
 ![spatial join](assets/2025-01-21-05-14-20.png)
 
-
 ---
-
 
 
 {/* [An introduction to Projections](/static/pdfs/An-Introduction-to-Projections.pdf) */}
