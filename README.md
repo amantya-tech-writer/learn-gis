@@ -20,8 +20,8 @@ The project is built using [Docusaurus](https://docusaurus.io/), a modern static
 3. Geometric Feature Layers
 4. Dimensions in GIS
 5. GeoJSON Examples
-    - Point Features
-    - Polygon Features
+   - Point Features
+   - Polygon Features
 
 ## Getting Started
 
@@ -47,3 +47,5 @@ npm run build
 
 - Node.js >= 18.0
 - Modern web browsers (see browserslist in package.json)
+
+![](C:\Users\Aditya.raj\AppData\Roaming\marktext\images\2025-01-23-15-46-02-image.png)
