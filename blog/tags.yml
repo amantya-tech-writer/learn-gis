@@ -17,3 +17,14 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+
+vertigis:
+  label: vertigis
+  permalink: /vertigis
+  description: vertigis software for geospatial analysis
+
+documentation:
+  label: documentation
+  permalink: /documentation
+  description: documentation related posts
