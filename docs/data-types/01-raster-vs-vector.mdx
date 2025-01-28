@@ -1,0 +1,79 @@
+---
+position: 1
+slug: raster-vs-vector
+title: Raster vs. Vector
+---
+
+## Vector is Corrector.
+
+Object data model:
+
+- generalization
+- represent real things as locations and attributes
+- objects = conceptualizations of real items
+- concrete or abstract
+
+```json
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [77.230004, 28.6947]
+    },
+    "properties": {
+        "name": "Majnu ka Tilla",
+        "type": "food joints",
+        "rating": 4.5,
+        "state": "Delhi",
+        "country": "India"
+    }
+}
+```
+
+| Restaurant Name | Coordinates | Food Type | Cost (1-5) | Hours | Capacity | Rating |
+|----------------|-------------|------------|------------|-------|----------|---------|
+| Ama Restaurant | [77.2305, 28.6948] | Tibetan, Chinese | 2 | 11AM-10PM | 40 | 4.3 |
+| Dolma House | [77.2307, 28.6945] | Tibetan | 2 | 10AM-9PM | 25 | 4.4 |
+| AMA Cafe | [77.2306, 28.6947] | Cafe, Breakfast | 3 | 8AM-9PM | 30 | 4.6 |
+| Rigo Restaurant | [77.2304, 28.6946] | Korean, Japanese | 3 | 12PM-10PM | 35 | 4.2 |
+| Busan Korean | [77.2305, 28.6949] | Korean | 4 | 12PM-11PM | 45 | 4.5 |
+
+> Rester is faster, but vector is corrector.
+
+Vector caclculations:
+
+- re-projection is precise
+- reliably stores:
+ - point overvations
+ - edges
+ - boundaries
+- attributes stay reliable if joined properly
+
+## Raster is Faster.
+
+Raster data model:
+
+[raster data model](assets/2025-01-28-05-48-17.png)
+
+Raster alignment:
+
+- location, grid of values
+- raster become difficult when comparing locations (10m cell size vs 15m cell size)
+- need to decide which cells should overlap
+
+Raster re-projection:
+
+- introduces errors
+- lossy data
+- less precise than vector
+
+Multiband raster:
+
+- rasters can be stacked to work with multiple rasters as if they're one.
+- each "band" is a single raster.
+- ex: represent data from different sensors captured at the same time.
+
+
+![multi-band rasters](assets/2025-01-28-05-46-52.png)
+
+![multi-band raster in ArcGIS](assets/2025-01-28-06-10-20.png)
